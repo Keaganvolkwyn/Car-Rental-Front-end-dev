@@ -1,0 +1,133 @@
+:root {
+  --primary-color: #cfe321;
+  --secondary-color: #272a31;
+  --star-color: #eea929;
+  --red-color: #ee2929;
+  --green-color: #00e908;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.main-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  position: relative;
+  padding: 2rem 8rem;
+}
+
+.heading {
+  text-align: center;
+  padding-top: 6rem;
+  color: var(--primary-color);
+}
+
+.sub-heading {
+  text-align: center;
+  padding-top: 10rem;
+  color: var(--primary-color);
+}
+
+.car-container {
+  height: 400px;
+  box-shadow: 0 0 10px 0 rgba(135, 133, 133, 0.747);
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 1rem;
+}
+
+.image {
+  width: 100%;
+  height: 75%;
+}
+
+.car-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.car-details {
+  height: 20%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem;
+  align-items: center;
+  column-gap: 3rem;
+}
+
+.btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 80px;
+  width: 80px;
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.prev-btn {
+  left: 0;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+
+.next-btn {
+  right: 0;
+  border-bottom-left-radius: 50%;
+  border-top-left-radius: 50%;
+}
+
+.star {
+  font-size: 20px;
+  color: var(--star-color);
+}
+
+.delete-car-button {
+  margin: 0 auto;
+  display: block;
+  font-size: 0.9rem;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  background-color: var(--red-color);
+  box-shadow: 4px 4px 5px 2px rgba(0, 0, 0, 0.2);
+  transform: translateY(-60%);
+}
+
+.delete-car-button:hover,
+.delete-car-button:focus {
+  box-shadow: none;
+  cursor: pointer;
+  transform: translateY(-60%) translateY(-2px);
+}
+
+.delete-icon {
+  font-size: 1rem;
+  margin-right: 2.5px;
+  transform: translateY(3px);
+}
+
+.back-to-main-link {
+  position: absolute;
+  left: 25px;
+  top: 13.5px;
+  font-size: 1.4rem;
+}
+
+@media (max-width: 900px) {
+  .btn {
+    top: 100%;
+  }
+
+  .main-container {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 2rem 1rem;
+  }
+}
